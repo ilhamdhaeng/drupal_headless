@@ -1,0 +1,14 @@
+uuid: 1d62ea67-1872-410e-b40f-58f86b90d595
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: 'Website feedback'
+recipients:
+  - ilham.dhaeng@aleph-labs.com
+reply: ''
+weight: 0
+message: 'Your message has been sent.'
+redirect: ''
