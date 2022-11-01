@@ -1,0 +1,18 @@
+parameters:
+  monolog.channel_handlers:
+    mail: ['error', 'mail']
+    smtp: ['error', 'mail']
+    php: ['info', 'error', 'error_log']
+    default: ['info', 'error', 'syslog']
+  monolog.processors: ['message_placeholder', 'filter_backtrace', 'current_user', 'request_uri', 'referer', 'ip']
+
+services:
+  monolog.handler.mail:
+    class: Monolog\Handler\RotatingFileHandler
+    arguments: ['private://logs/mail.log', 30, 'DEBUG']
+  monolog.handler.error:
+    class: Monolog\Handler\RotatingFileHandler
+    arguments: ['private://logs/error.log', 30, 'ERROR', false]
+  monolog.handler.info:
+    class: Monolog\Handler\RotatingFileHandler
+    arguments: ['private://logs/info.log', 30, 'DEBUG']

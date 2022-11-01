@@ -1,0 +1,42 @@
+grumphp:
+    tasks:
+      phpcs:
+        standard:
+          - vendor/drupal/coder/coder_sniffer/Drupal
+          - vendor/drupal/coder/coder_sniffer/DrupalPractice
+        ignore_patterns:
+            - cfg/
+            - libraries/
+            - vendor/
+        triggered_by:
+            - php
+            - module
+            - inc
+      phpmd:
+        whitelist_patterns: ['web/']
+        ruleset: ['phpmd.xml']
+        exclude: ['web/core/*','web/modules/contrib/*','vendor/*']
+      file_size:
+        max_size: 3M
+      git_commit_message:
+        enforce_capitalized_subject: false
+        max_subject_width: 180
+        matchers:
+          Commit message must begin with a story number: /^(Merge|#\d+)\s/
+        case_insensitive: false
+      git_blacklist:
+        keywords:
+            - "die\\("
+            - "var_dump\\("
+            - "console\\.log\\("
+            - "exit;"
+        triggered_by: ['php', 'phtml']
+        regexp_type: E
+        metadata:
+          blocking: true
+          priority: 900
+    hide_circumvention_tip: true
+    ignore_unstaged_changes: false
+    ascii:
+      failed: failed.txt
+      succeeded: succeeded.txt
