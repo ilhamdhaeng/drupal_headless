@@ -7,11 +7,13 @@
 - less custom template, more on configurations
 - custom hooks, template, js & css on theme,
 - custom blocks, forms, & any other plugins on module
-- French for label/title things (content type, fields, blocks, etc), English for machine names
+- Any Language for label/title things (content type, fields, blocks, etc), English for machine names
+- create fields machine name as general as possible so it can be reuse in other content type (ex. if you want to create description field for content type article, don't name it: article_description, just name it: description)
 - reuse fields as much as possible
   - 1 content type at a time
-- pull js for themes using npm
-- pull js for contrib module using composer
+- install contrib module using composer
+- create custom modules if there are no contrib modules that can handle requirements
+- custom modules should follow the Drupal coding standards
 - if there's an unused module, uninstall it BUT DON'T REMOVE FROM COMPOSER
 
 ## Update local steps:
@@ -21,7 +23,6 @@
 - `vendor/bin/drush cc plugin`
 - `vendor/bin/drush cr`
 - `vendor/bin/drush cim`
-- if js updated: `npm i`, `npm run dev`
 - if menu/taxonomy updated: import through structure sync
 
 ## Commit steps
@@ -29,7 +30,7 @@
 - `vendor/bin/drush cex`
 - commit ONLY THE NECESSARY FILES
 - push
-- create merge request on gitlab
+- create merge request on gitlab/github/bitbucket/etc
 - if merge conflict: do update local, resolve the conflict
 - if menu/taxonomy updated: import through structure sync on DEV
 
