@@ -29,6 +29,7 @@
 - if menu/taxonomy updated: export through structure sync
 - `vendor/bin/drush cex`
 - commit ONLY THE NECESSARY FILES
+- Commit message must begin with a story number, for example: git commit -m "#10000 update readme file"
 - push
 - create merge request on gitlab/github/bitbucket/etc
 - if merge conflict: do update local, resolve the conflict
