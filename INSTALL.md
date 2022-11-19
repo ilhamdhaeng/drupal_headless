@@ -1,6 +1,6 @@
 # Installation
 1. get the latest changes
-   1. clone project from [github](https://github.com/ilhamdhaeng/drupal_headless)
+   1. clone or fork project from [github](https://github.com/ilhamdhaeng/drupal_headless)
    1. switch to dev branch
 1. setup database
    1. create database
@@ -9,9 +9,6 @@
    1. cd to `project root`
    1. set php *memory_limit* to `2G` or more
    1. `composer install`
-   1. reset the php *memory_limit*
-   1. `vendor/bin/drush cc plugin`
-   1. `vendor/bin/drush cr`
 1. setup configurations
    1. cd to folder `/web/sites/default`
    1. copy `default.settings.env.php` to `settings.env.php`
@@ -20,8 +17,14 @@
    1. set value `twig.config: debug` to `true`
 1. import config
    1. cd to folder `project root`
-   1. `vendor/bin/drush cim -y`
+   1. `vendor/bin/drush cim`
    1. `vendor/bin/drush cr`
+   1. `vendor/bin/drush cc plugin`
+1. Login to Admin Area
+   1. browse to `user/login`
+   1. username `admin`
+   1. password `admin123$`
+   1. login
 1. enable redis cache (optional)
    1. install redis-server & php-redis on your web server
    1. start redis-server

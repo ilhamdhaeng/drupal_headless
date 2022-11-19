@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "11387cd67fef3ade0c959c29d5cc15a1",
+    "content-hash": "f4c129556515c9b4186070ed6202da13",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1966,6 +1966,66 @@
             "homepage": "https://www.drupal.org/project/redis",
             "support": {
                 "source": "https://git.drupalcode.org/project/redis"
+            }
+        },
+        {
+            "name": "drupal/rest_export_nested",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/rest_export_nested.git",
+                "reference": "8.x-1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/rest_export_nested-8.x-1.0.zip",
+                "reference": "8.x-1.0",
+                "shasum": "0c205ddd5578cdb825f7fb2bbcbca0b632ab728e"
+            },
+            "require": {
+                "drupal/core": "^8 || ^9"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.0",
+                    "datestamp": "1619032476",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Nelson Alves",
+                    "homepage": "https://www.drupal.org/user/3557178"
+                },
+                {
+                    "name": "dgaspara",
+                    "homepage": "https://www.drupal.org/user/3557179"
+                },
+                {
+                    "name": "imclean",
+                    "homepage": "https://www.drupal.org/user/112588"
+                },
+                {
+                    "name": "joaomarques736",
+                    "homepage": "https://www.drupal.org/user/3557181"
+                },
+                {
+                    "name": "pmaiacar",
+                    "homepage": "https://www.drupal.org/user/3575425"
+                }
+            ],
+            "description": "Extends the REST Export views display to support JSON within fields.",
+            "homepage": "https://www.drupal.org/project/rest_export_nested",
+            "support": {
+                "source": "https://git.drupalcode.org/project/rest_export_nested"
             }
         },
         {

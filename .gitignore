@@ -1,6 +1,7 @@
 # IDE config
 /.idea
 /.vscode
+/.DS_Store
 
 # contrib codes: modules, themes, drupal core, npm, composer, etc
 /drush/Commands/contrib
@@ -41,9 +42,6 @@
 /web/sites/default/default.settings.php
 
 # env specific configs / files
-/private/*
-!/private/logs
-/private/logs/*
-!/private/logs/.gitkeep
+/private/logs/*.log
 /web/sites/*/settings.env.php
 /web/sites/*/services.yml
