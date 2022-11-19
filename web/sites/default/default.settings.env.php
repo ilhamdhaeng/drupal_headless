@@ -2,7 +2,7 @@
 
 // @codingStandardsIgnoreFile
 $databases['default']['default'] = [
-  'database' => 'csem',
+  'database' => 'drupal_headless',
   'username' => 'root',
   'password' => '',
   'prefix' => '',
@@ -14,7 +14,7 @@ $databases['default']['default'] = [
 assert_options(ASSERT_ACTIVE, TRUE);
 \Drupal\Component\Assertion\Handle::register();
 
-$settings['container_yamls'][] = DRUPAL_ROOT . '/sites/development.services.yml';
+$settings['container_yamls'][] = $app_root . '/sites/development.services.yml';
 $settings['cache']['bins']['render'] = 'cache.backend.null';
 $settings['cache']['bins']['page'] = 'cache.backend.null';
 $settings['cache']['bins']['dynamic_page_cache'] = 'cache.backend.null';
@@ -25,7 +25,7 @@ $settings['reverse_proxy'] = FALSE;
 $config['system.logging']['error_level'] = 'verbose';
 $config['system.performance']['css']['preprocess'] = FALSE;
 $config['system.performance']['js']['preprocess'] = FALSE;
-$config['system.site']['name'] = 'CSEM LOCAL';
+$config['system.site']['name'] = 'Drupal Headless';
 $config['mailsystem.settings']['defaults']['sender'] = 'php_mail';
 $config['simple_sitemap_engines.settings']['enabled'] = FALSE;
 $config['config_split.config_split.dev']['status'] = TRUE;

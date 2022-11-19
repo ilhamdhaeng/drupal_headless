@@ -24,6 +24,7 @@
         "drupal/monolog": "^2.2",
         "drupal/pathauto": "^1.11",
         "drupal/redis": "^1.6",
+        "drupal/rest_export_nested": "^1.0",
         "drupal/structure_sync": "^2.0",
         "drush/drush": "^11.3"
     },
